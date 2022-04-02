@@ -6,7 +6,6 @@ function Board (props){
     const cuadroCreator = values => (
         values.map(value => (
             <Cuadro 
-                color={props.turno === 'X' ? 'red' : 'blue'}
                 turno={props.turno}
                 onClick={() => props.onClick(value)}
                 value={props.cuadros[value]}
