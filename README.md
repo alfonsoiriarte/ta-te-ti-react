@@ -13,6 +13,6 @@ Create-react-app
 
 ### `Tailwind`
 
-CSS framework
+CSS framework - (postcss + autoprefixer)
 
 [![tailwind-screen-example.png](https://i.postimg.cc/PJhk3rk4/tailwind-screen-example.png)](https://postimg.cc/MMs4XwHM)

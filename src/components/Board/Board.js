@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Cuadro from './Cuadro'
 
-function Board (props){
+function Board ({ turno, cuadros, onClick }){
     
     const cuadroCreator = values => (
         values.map(value => (
             <Cuadro 
-                turno={props.turno}
-                onClick={() => props.onClick(value)}
-                value={props.cuadros[value]}
+                turno={turno}
+                onClick={() => onClick(value)}
+                value={cuadros[value]}
                 key={`square_${value}`}
             />
         ))

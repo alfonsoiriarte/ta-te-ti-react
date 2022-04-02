@@ -1,7 +1,7 @@
 import React from "react";
 
 function Stats(props) {
-  const claseStats = "text-white font-bold text-xl py-1 px-2 md:rounded";
+  const claseStats = "text-white font-bold text-xl py-1 px-2 md:rounded shadow-lg shadow-slate-500";
 
   return (
     <div className="flex cursor-default md:space-x-60 justify-center mx-10 mt-12 md:mt-4 2xl:mt-20">

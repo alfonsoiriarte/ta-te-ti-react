@@ -14,7 +14,7 @@ const casillasGanadoras = [
     [2,4,6],
 ];
 
-function Juego() {
+export default function Juego() {
     const [cuadros, setCuadros] = useState(Array(9).fill(null));
     const [turno, setTurno] = useState('X');
     const [finDelJuego, setFinDelJuego] = useState(1);
@@ -46,9 +46,7 @@ function Juego() {
     const handleClick = cuadro => {
         let newCuadros = [...cuadros];
         newCuadros[cuadro] = turno;
-        setCuadros(newCuadros);
-        
-        
+        setCuadros(newCuadros);        
     }
 
     useEffect(() => {
@@ -64,13 +62,13 @@ function Juego() {
             })
         }
         setFinDelJuego(0);
+        
     }
 
     const playAgain = () => {
         let newCuadros = Array(9).fill(null);
         setCuadros(newCuadros);
         setFinDelJuego(1);
-
     }
 
     return (
@@ -80,7 +78,4 @@ function Juego() {
             {finDelJuego === 1 || <ButtonPlayAgain onclick={playAgain} texto="PLAY AGAIN" />}
         </div>
     )
-
 }
-
-export default Juego;
