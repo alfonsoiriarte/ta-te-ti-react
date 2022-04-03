@@ -14,7 +14,7 @@ const casillasGanadoras = [
     [2,4,6],
 ];
 
-export default function Juego() {
+export default function Juego({handlerGradient}) {
     const [cuadros, setCuadros] = useState(Array(9).fill(null));
     const [turno, setTurno] = useState('X');
     const [finDelJuego, setFinDelJuego] = useState(1);
@@ -22,6 +22,7 @@ export default function Juego() {
         X: 0,
         O: 0
     }); 
+
 
     const checkForWinner = cuadros => {
         let flagWinner = 0;
@@ -46,12 +47,16 @@ export default function Juego() {
     const handleClick = cuadro => {
         let newCuadros = [...cuadros];
         newCuadros[cuadro] = turno;
-        setCuadros(newCuadros);        
+        setCuadros(newCuadros);     
     }
 
     useEffect(() => {
         checkForWinner(cuadros);
     }, [cuadros]);
+
+    useEffect(() => {
+        handlerGradient(puntaje);
+    },[puntaje])
 
     const endGame = (resultado) => {
         setTurno(null);
@@ -61,8 +66,8 @@ export default function Juego() {
                 [resultado]: puntaje[resultado] + 1,
             })
         }
+        console.log(puntaje);   
         setFinDelJuego(0);
-        
     }
 
     const playAgain = () => {
@@ -75,7 +80,7 @@ export default function Juego() {
         <div>
             <Board turno={turno} cuadros={cuadros} onClick={handleClick} />
             <Stats puntaje={puntaje} className={finDelJuego} />
-            {finDelJuego === 1 || <ButtonPlayAgain onclick={playAgain} texto="PLAY AGAIN" />}
+            {finDelJuego === 1 || <ButtonPlayAgain onClick={playAgain} texto="PLAY AGAIN" />}
         </div>
     )
 }
