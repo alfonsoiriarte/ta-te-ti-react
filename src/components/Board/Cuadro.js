@@ -10,7 +10,7 @@ function Cuadro ({ turno, value, onClick}) {
 
     return (
         <div onClick={() => handleClick()} className='flex-item rounded-full shadow-2xl bg-white w-20 h-20 sm:w-20 sm:h-20 md:h-24 md:w-24 2xl:w-32 2xl:h-32 m-2 text-center select-none'>
-            {value === null ? '' : <img className='flex h-16 m-auto mt-1 md:mt-4 2xl:mt-3' src={item} alt="cruz" />}
+            {value === null ? '' : <img className='flex h-12 md:h-16 2xl:h-20 m-auto mt-4 md:mt-4 2xl:mt-6' src={item} alt="cruz" />}
         </div>
     )
 

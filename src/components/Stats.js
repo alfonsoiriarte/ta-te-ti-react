@@ -1,13 +1,12 @@
 import React from "react";
 
 function Stats({onClick, setPuntaje, puntaje}) {
-  const claseStats = "text-white font-bold text-xl py-1 px-[0.39rem]";
 
   return (
     <div>
       <div className="flex cursor-default justify-center mt-20 2xl:mt-20">
-        <div className={`${claseStats} bg-blue-500 hover:bg-blue-700 `}>Blue score: {puntaje.O}</div>
-        <div className={`${claseStats} bg-red-500 hover:bg-red-700 `}>Red score: {puntaje.X}</div>
+        <div className="text-white font-bold text-xl p-1 w-32 bg-blue-500 hover:bg-blue-700" >Blue: {puntaje.O}</div>
+        <div className="text-white font-bold text-xl p-1 w-32 bg-red-500 hover:bg-red-700" >Red: {puntaje.X}</div>
       </div>
       <div className="flex justify-center">
         <div onClick={() => {
