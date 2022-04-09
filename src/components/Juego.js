@@ -1,7 +1,7 @@
 import React, {  useState, useEffect } from 'react';
 import Board from './Board/Board';
 import Stats from './Stats';
-import ButtonPlayAgain from './Buttons/ButtonPlayAgain'
+import ButtonPlayAgain from './Buttons/ButtonPlayAgain';
 
 const casillasGanadoras = [
     [0,1,2],
@@ -79,8 +79,8 @@ export default function Juego({handlerGradient}) {
     return (
         <div>
             <Board turno={turno} cuadros={cuadros} onClick={handleClick} />
-            <Stats puntaje={puntaje} className={finDelJuego} />
-            {finDelJuego === 1 || <ButtonPlayAgain onClick={playAgain} texto="PLAY AGAIN" />}
+            <ButtonPlayAgain onClick={playAgain} finDelJuego={finDelJuego}/>
+            <Stats puntaje={puntaje} className={finDelJuego} onClick={playAgain} setPuntaje={setPuntaje} />
         </div>
     )
 }

@@ -13,7 +13,7 @@ export default function App() {
   }
 
   return (
-    <main className={`h-screen text-black ${grandientColor} animate-bg-transition-rl`}>
+    <main className={`h-screen text-black ${grandientColor}`}>
       <Navbar />
       <Juego handlerGradient={handlerGradient} />
       <Footer/>

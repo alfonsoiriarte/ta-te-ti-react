@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <header className="bg-gray-800 md:sticky top-0 shadow-xl shadow-black-900">
-      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <div className="title-font font-medium text-white mb-4 md:mb-0">
-          <a href="#about" className="text-xl">
+    <header className="bg-gray-800 top-0 shadow-xl shadow-black-900">
+      <div className="flex p-5 md:p-3 flex-col md:flex-row items-center">
+        <div className="text-white">
+          <a href="#about" className="text-base md:text-xl">
             Alfonso Iriarte
           </a>
           <a href="#" className="text-sm ml-20 content-center">
